@@ -1,30 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
-import Logo from "./Logo1.png";
+import * as GoIcons from "react-icons/go";
+import Logo from "./Logo3.png";
 
 const TopNavbar = () => (
   <div className="Navbar">
     <div className="leftSide">
-      <img src={Logo} height="65px" width="150px" alt="" />
+      <img src={Logo} height="48px" width="72px" alt="" />
     </div>
     <div className="rightSide">
-      <div>
-        <input type="text" placeholder="Search Here..." />
-        <button type="submit">
-          <FaIcons.FaSearch />
-        </button>
-      </div>
-
       <div className="links">
-        <Link to="/login">
-          <AiIcons.AiOutlineLogin style={{ paddingRight: 5 }} />
+        <Link to="/login" className="iconStyle">
+          <GoIcons.GoSignIn style={{ paddingRight: 5 }} />
           Login
-        </Link>
-        <Link to="/register">
-          <FaIcons.FaCashRegister style={{ paddingRight: 5 }} />
-          Register
         </Link>
       </div>
     </div>
