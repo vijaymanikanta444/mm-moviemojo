@@ -4,11 +4,15 @@
   "description": "BACK-END API",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon --exec babel-node -- src/server.js"
+    "server": "nodemon --exec babel-node -- src/server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server \" \"npm run client\""
   },
   "author": "fullstackdev",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^5.3.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.11.9",
