@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaSearch } from "react-icons/fa";
+import * as FaIcons from "react-icons/fa";
+import * as AiIcons from "react-icons/ai";
 import Logo from "./Logo1.png";
 
 const TopNavbar = () => (
@@ -12,13 +13,19 @@ const TopNavbar = () => (
       <div>
         <input type="text" placeholder="Search Here..." />
         <button type="submit">
-          <FaSearch />
+          <FaIcons.FaSearch />
         </button>
       </div>
 
       <div className="links">
-        <Link to="/login">Login</Link>
-        <Link to="/register">Register</Link>
+        <Link to="/login">
+          <AiIcons.AiOutlineLogin style={{ paddingRight: 5 }} />
+          Login
+        </Link>
+        <Link to="/register">
+          <FaIcons.FaCashRegister style={{ paddingRight: 5 }} />
+          Register
+        </Link>
       </div>
     </div>
   </div>

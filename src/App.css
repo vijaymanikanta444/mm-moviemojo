@@ -69,10 +69,6 @@ button:hover {
   margin-top: 100px;
 }
 
-.logoStyle {
-  padding-right: 15px;
-  display: flex;
-}
 .links {
   display: flex;
   flex-direction: row;
