@@ -1,8 +1,10 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 
+
 const Test98 = () => {
   // const [data, setData] = useState(0);
+
 
   useEffect(() => {
     axios.get("/movies").then((res) => console.log(res.data));
