@@ -1,3 +1,148 @@
 .App {
+  width: 100vw;
+  height: 100vh;
   text-align: center;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+button:hover {
+  cursor: pointer;
+}
+
+.Navbar {
+  background-color: #021e39;
+  width: 100%;
+  height: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftSide {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rightSide {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  align-items: center;
+}
+.rightSide .links {
+  max-height: 80px;
+}
+.rightSide .links a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-right: 15px;
+  padding-left: 10px;
+}
+
+.rightSide input {
+  width: 220px;
+  height: 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  padding-left: 15px;
+  color: black;
+}
+
+.rightSide button {
+  height: 25px;
+  width: 35px;
+  font-size: 15px;
+  margin-left: 2px;
+  border-radius: 4px;
+  justify-content: center;
+}
+
+.mt-20 {
+  margin-top: 100px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 850px) {
+  .Navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+
+  .leftSide {
+    padding-top: 10px;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+
+  .rightSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  body {
+    display: none;
+  }
+}
+
+/* @media only screen and (max-width: 750px) {
+  .Navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+  .Navbar .leftSide img {
+    margin-top: 25px;
+    width: 50%;
+  }
+  .Navbar .rightSide .links {
+    position: absolute;
+    right: 0px;
+    top: 70px;
+    height: 90px;
+    max-height: 200px;
+    width: 100%;
+    background-color: #021e39;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Navbar .rightSide .links a {
+    padding-bottom: 20px;
+    font-size: 22px;
+  }
+  .rightSide input {
+    width: 200px;
+    height: 19px;
+    font-size: 12px;
+  }
+  .rightSide button {
+    height: 20px;
+    width: 60px;
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .Navbar .leftSide img {
+    margin-top: 20px;
+    width: 50%;
+  }
+} */
