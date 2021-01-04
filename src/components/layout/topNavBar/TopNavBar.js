@@ -6,11 +6,11 @@ import Logo from "./Logo3.png";
 const TopNavbar = () => (
   <div className="Navbar">
     <div className="leftSide">
-      <img src={Logo} height="48px" width="72px" alt="" />
+      <img src={Logo} height="48px" width="72px" alt="MM-logo" />
     </div>
     <div className="rightSide">
-      <div className="links">
-        <Link to="/login" className="iconStyle">
+      <div className="iconStyle">
+        <Link to="/login" className="login">
           <GoIcons.GoSignIn style={{ paddingRight: 5 }} />
           Login
         </Link>
