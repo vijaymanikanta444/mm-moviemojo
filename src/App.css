@@ -268,19 +268,13 @@ button:hover {
   grid-row-end: 3; */
 }
 
-.test {
-  /* transition: 500ms;
-  left: 15%;
-  right: -15%; */
+/* .test {
+ 
   position: relative;
   top: 60px;
-  /* width: 80%; */
-  /* margin-left: 60px;
-  margin-right: 280px; */
-  /* margin: auto; */
-  /* margin-top: 57px; */
-}
-.test1 {
+  
+} */
+.test {
   /* transition: 500ms; */
   position: relative;
   top: 60px;

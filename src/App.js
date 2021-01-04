@@ -15,7 +15,7 @@ function App() {
       <Router>
         <TopNavbar />
         <SideBar sidebar={sidebar} showSidebar={showSidebar} />
-        <div className={sidebar ? "test" : "test1"}>
+        <div className="test">
           <Switch>
             <Route exact path="/" component={Test98} />
             <Route exact path="/login" component={LoginPage} />
