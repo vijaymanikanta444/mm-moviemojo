@@ -82,9 +82,25 @@ button:hover {
   flex-direction: row;
 }
 
+.login {
+  color: white;
+  text-decoration: none;
+  /* height: 27px; */
+  /* size: auto; */
+  font-size: 20px;
+}
+
 .iconStyle {
+  /* display: flex; */
   display: flex;
+  flex-direction: row;
+  text-decoration: none;
   padding-right: 40px;
+  align-items: center;
+}
+
+.iconStyle :hover {
+  color: cyan;
 }
 
 @media only screen and (max-width: 850px) {

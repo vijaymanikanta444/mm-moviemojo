@@ -9,8 +9,8 @@ const TopNavbar = () => (
       <img src={Logo} height="48px" width="72px" alt="" />
     </div>
     <div className="rightSide">
-      <div className="links">
-        <Link to="/login" className="iconStyle">
+      <div className="iconStyle">
+        <Link to="/login" className="login">
           <GoIcons.GoSignIn style={{ paddingRight: 5 }} />
           Login
         </Link>
