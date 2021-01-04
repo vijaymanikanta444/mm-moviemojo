@@ -252,19 +252,19 @@ button:hover {
 }
 
 .test {
-  transition: 500ms;
+  /* transition: 500ms;
   left: 15%;
-  right: -15%;
+  right: -15%; */
   position: relative;
   top: 60px;
   /* width: 80%; */
-  margin-left: 60px;
-  margin-right: 280px;
+  /* margin-left: 60px;
+  margin-right: 280px; */
   /* margin: auto; */
   /* margin-top: 57px; */
 }
 .test1 {
-  transition: 500ms;
+  /* transition: 500ms; */
   position: relative;
   top: 60px;
   width: 80%;
