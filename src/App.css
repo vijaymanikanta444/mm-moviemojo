@@ -8,7 +8,8 @@ body {
   margin: 0;
   padding: 0;
   color: white;
-  background-color: #1d2329;
+  /* background-color: #17202a; */
+  background-color: #101820ff;
 }
 
 /* Navbar */
@@ -17,7 +18,8 @@ button:hover {
 }
 
 .Navbar {
-  background-color: #021e39;
+  /* background-color: #021e39; */
+  background-color: #212f3d;
   width: 100%;
   height: 60px;
   font-family: Arial, Helvetica, sans-serif;
@@ -130,54 +132,7 @@ button:hover {
   }
 }
 
-/* @media only screen and (max-width: 750px) {
-  .Navbar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: auto;
-  }
-  .Navbar .leftSide img {
-    margin-top: 25px; 
-    width: 50%;
-  }
-  .Navbar .rightSide .links {
-    position: absolute;
-    right: 0px;
-    top: 70px;
-    height: 90px;
-    max-height: 200px;
-    width: 100%;
-    background-color: #021e39;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .Navbar .rightSide .links a {
-    padding-bottom: 20px;
-    font-size: 22px;
-  }
-  .rightSide input {
-    width: 200px;
-    height: 19px;
-    font-size: 12px;
-  }
-  .rightSide button {
-    height: 20px;
-    width: 60px;
-    font-size: 10px;
-  }
-}
-
-@media only screen and (max-width: 650px) {
-  .Navbar .leftSide img {
-    margin-top: 20px;
-    width: 50%;
-  }
-} */
-
 .nav {
-  /* background: #15171c; */
   height: 39px;
   display: flex;
   justify-content: flex-start;
@@ -185,11 +140,8 @@ button:hover {
   position: fixed;
   transition: 500ms;
   z-index: 10;
-  /* margin-top: 65px; */
 }
 .nav-icon {
-  /* margin-left: 2rem; */
-  /* margin-top: 57px; */
   margin-left: 5px;
   font-size: 2rem;
   height: 30px;
@@ -197,26 +149,15 @@ button:hover {
   justify-content: flex-start;
   align-items: center;
   padding: 5px;
-  /* border: white 2px solid; */
-  /* border-radius: 50%; */
-  /* border-right-color: white;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-bottom-color: white;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-top-color: white;
-  border-top-style: solid;
-  border-top-width: 2px; */
+
   outline: none;
-  /* background: black; */
+
   position: fixed;
   top: 70px;
 }
 
 .sidebar-nav {
-  /* background-color: #15171c; */
-  background-color: black;
+  background-color: #101820ff;
   width: 17%;
   height: 100vh;
   display: flex;
@@ -225,13 +166,7 @@ button:hover {
   top: 60px;
   transition: 500ms;
   z-index: 10;
-  /* margin-top: 57px; */
 }
-
-/* .sidebar-nav::before {
-  background-image: url('https://cdn.wallpapersafari.com/54/52/b1DSQ4.jpg');
-  opacity: 0.5;
-} */
 
 .sidebar-wrap {
   width: 100%;
@@ -239,13 +174,13 @@ button:hover {
 
 .sidebar-link {
   display: flex;
-  /* flex-direction: column; */
+
   color: #e1e9fc;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
   list-style: none;
-  /* height: 20px; */
+
   text-decoration: none;
   font-size: 20px;
 }
@@ -264,24 +199,6 @@ button:hover {
 .footer {
   background: #abb2b9;
   padding: 2px;
-  /* grid-row-start: 2;
-  grid-row-end: 3; */
-}
-
-/* .test {
- 
-  position: relative;
-  top: 60px;
-  
-} */
-.test {
-  /* transition: 500ms; */
-  position: relative;
-  top: 60px;
-  width: 80%;
-  margin: auto;
-  /* margin-top: 57px; */
-  /* padding-left: none; */
 }
 
 .s0 {
@@ -347,4 +264,18 @@ button:hover {
   background: #050505;
   color: #ffffff;
   box-shadow: #252831 2px;
+}
+
+.space {
+  margin: 10px 0;
+  word-wrap: break-word;
+}
+
+.grid-container--fit {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.card1 {
+  border: 2px solid black;
+  border-radius: 6px;
+  outline: none;
 }

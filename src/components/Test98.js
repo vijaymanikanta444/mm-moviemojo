@@ -10,15 +10,22 @@ const Test98 = (props) => {
   }, []);
 
   return (
-    <div>
-      {movies.map((movie) => (
-        <div key={movie.id}>
-          <h1>{movie.title}</h1>
-          <p>{movie.about}</p>
-          {movie.artists.length && <p>{movie.artists[0].name}</p>}
-          <hr />
-        </div>
-      ))}
+    <div className="container grid-container--fit ">
+      <div className="row row-cols-4">
+        {movies.map((movie) => (
+          <div className="col space">
+            <img
+              src={movie.image}
+              alt={movie.title}
+              height="85%"
+              width=" 100%"
+              className="card1"
+            />
+            <h5>{movie.title}</h5>
+            <span>{movie.released}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
