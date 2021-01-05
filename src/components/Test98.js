@@ -12,10 +12,10 @@ const Test98 = (props) => {
   return (
     <div>
       {movies.map((movie) => (
-        <div>
+        <div key={movie.id}>
           <h1>{movie.title}</h1>
           <p>{movie.about}</p>
-          <p>{movie.crew.director.name}</p>
+          {movie.artists.length && <p>{movie.artists[0].name}</p>}
           <hr />
         </div>
       ))}
