@@ -217,7 +217,7 @@ button:hover {
 .sidebar-nav {
   /* background-color: #15171c; */
   background-color: black;
-  width: 15%;
+  width: 17%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -282,6 +282,23 @@ button:hover {
   margin: auto;
   /* margin-top: 57px; */
   /* padding-left: none; */
+}
+
+.s0 {
+  /* transition: 500ms; */
+  position: relative;
+  top: 60px;
+  width: 80%;
+  margin: auto;
+}
+
+.s17 {
+  /* transition: 500ms; */
+  position: relative;
+  top: 60px;
+  width: 70%;
+  /* margin: auto; */
+  margin-left: 23%;
 }
 
 .search_wrap {
