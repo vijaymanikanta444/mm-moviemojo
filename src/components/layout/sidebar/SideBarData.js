@@ -3,9 +3,11 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as Io5Icons from "react-icons/io5";
 import * as BiIcons from "react-icons/bi";
+import * as BsIcons from "react-icons/bs";
+import * as MdIcons from "react-icons/md";
 
 const SideBarData = [
-  { title: "Home", path: "/", icon: <Io5Icons.IoHome /> },
+  // { title: "Home", path: "/", icon: <Io5Icons.IoHome /> },
   {
     title: "Movies",
     path: "/movies",
@@ -46,6 +48,11 @@ const SideBarData = [
     ],
   },
   {
+    title: "TV",
+    path: "/tv",
+    icon: <BsIcons.BsFillDisplayFill />,
+  },
+  {
     title: "News",
     path: "/news",
     icon: <Io5Icons.IoNewspaperOutline />,
@@ -62,15 +69,31 @@ const SideBarData = [
       },
     ],
   },
+
   {
-    title: "About",
-    path: "/about",
-    icon: <FaIcons.FaInfoCircle />,
+    title: "Music",
+    path: "/music",
+    icon: <FaIcons.FaMusic />,
   },
   {
-    title: "Contact Us",
-    path: "/contact",
-    icon: <AiIcons.AiFillPhone />,
+    title: "Artists",
+    path: "/artists",
+    icon: <MdIcons.MdPeople />,
+  },
+  {
+    title: "Reviews",
+    path: "/reviews",
+    icon: <MdIcons.MdRateReview />,
+  },
+  {
+    title: "Videos",
+    path: "/videos",
+    icon: <MdIcons.MdSlowMotionVideo />,
+  },
+  {
+    title: "Entertainment",
+    path: "/entertainment",
+    icon: <MdIcons.MdLiveTv />,
   },
 ];
 

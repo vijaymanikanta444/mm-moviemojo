@@ -7,7 +7,7 @@ import LoginPage from "./components/pages/LoginPage";
 import Test98 from "./components/Test98";
 
 function App() {
-  const [sidebar, setsidebar] = useState(false);
+  const [sidebar, setsidebar] = useState(true);
 
   const showSidebar = () => setsidebar(!sidebar);
   return (
