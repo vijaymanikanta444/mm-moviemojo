@@ -3,7 +3,7 @@ import * as AiIcons from "react-icons/ai";
 
 const Card = () => {
   const [data] = useState({
-    title: "I",
+    title: "Master",
     image: "https://bestoftheyear.in/wp-content/uploads/2017/06/I-Poster.jpg",
     genre: " Action, Drama, Thriller",
     released: " 14 January 2015",
@@ -31,46 +31,47 @@ const Card = () => {
   });
   const artistNames = data.artists.map((artist) => artist.name).join(", ");
   return (
-    <div className="container">
-      <div className="card">
-        <div className="imgBx">
+    <div className="container1">
+      <div className="card1">
+        <div className="imgBx1">
           <img src={data.image} height="400px" width="300px" alt={data.title} />
         </div>
-
-        <div className="contentBx">
-          <h1>{data.title}</h1>
-          <div className="size">
-            <span>{data.genre}</span>
-          </div>
-          <hr
-            style={{
-              width: "75%",
-              margin: "auto",
-              border: "1.5px solid cyan",
-            }}
-          />
-          <div className="color">
+        <div className="content1">
+          <div className="contentBx1">
+            <h4>{data.title}</h4>
             <div>
-              <span>
-                <strong>Director: </strong>
-              </span>
-              {data.director}
+              <span>{data.genre}</span>
             </div>
+            <hr
+              style={{
+                width: "75%",
+                margin: "auto",
+                border: "1.5px solid cyan",
+              }}
+            />
             <div>
-              <span>
-                <strong>Artists: </strong>
-              </span>
-              {artistNames}
-            </div>
-            <div>
-              <span>
-                <strong>Rating: </strong>
-              </span>
-              {data.rating}
-              <AiIcons.AiFillStar style={{ color: "yellow" }} />
-            </div>
-            <div>
-              <button type="button">SHOW MORE</button>
+              <div>
+                <span>
+                  <strong>Director: </strong>
+                </span>
+                {data.director}
+              </div>
+              <div>
+                <span>
+                  <strong>Artists: </strong>
+                </span>
+                {artistNames}
+              </div>
+              <div>
+                <span>
+                  <strong>Rating: </strong>
+                </span>
+                {data.rating}
+                <AiIcons.AiFillStar style={{ color: "yellow" }} />
+              </div>
+              <div>
+                <button type="button">SHOW MORE</button>
+              </div>
             </div>
           </div>
         </div>
