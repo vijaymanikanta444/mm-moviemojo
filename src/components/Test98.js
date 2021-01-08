@@ -1,20 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+
 import * as AiIcons from "react-icons/ai";
+
 import { fetchMovies } from "../actions/movieActions";
 
 const Test98 = (props) => {
   const { fetchMovies, movies } = props;
+
+  const [pageno] = useState(1);
+
   useEffect(() => {
-    fetchMovies();
+    fetchMovies(pageno);
   }, []);
+
   return (
     <div className="container  ">
-      <div className="flex">
+      <div className="flex ">
         {movies.map((movie) => (
           <div className="card ">
-            <div className="imgBx">
+            <div className="imgBx ">
               <img
                 src={movie.image}
                 height="450px"
@@ -58,8 +64,10 @@ const Test98 = (props) => {
                   {movie.rating}
                   <AiIcons.AiFillStar style={{ color: "yellow" }} />
                 </div>
-                <div>
-                  <button type="button">SHOW MORE</button>
+                <div className="container2">
+                  <div type="button" className="button2">
+                    Show More
+                  </div>
                 </div>
               </div>
             </div>
