@@ -6,7 +6,8 @@ const loadMovies = (movies) => ({
   payload: movies,
 });
 
-export const fetchMovies = () => async (dispatch) => {
-  const movies = await axios.get("/movies");
-  dispatch(loadMovies(movies.data));
+export const fetchMovies = (skip) => async (dispatch) => {
+  const movies = await axios.get(`/movies?skip=${skip}&limit=16`);
+
+  dispatch(loadMovies(movies.data.movies));
 };

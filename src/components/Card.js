@@ -69,8 +69,8 @@ const Card = () => {
                 {data.rating}
                 <AiIcons.AiFillStar style={{ color: "yellow" }} />
               </div>
-              <div>
-                <button type="button">SHOW MORE</button>
+              <div className="container2">
+                <div className="button2">Details</div>
               </div>
             </div>
           </div>

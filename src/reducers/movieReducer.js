@@ -10,8 +10,9 @@ export default function movieReducer(state = initialState, action) {
     case types.FETCH_MOVIES:
       return {
         ...state,
-        data: action.payload,
+        data: [...state.data, ...action.payload],
       };
+
     default:
       return state;
   }
