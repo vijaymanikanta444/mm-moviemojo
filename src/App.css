@@ -454,3 +454,7 @@ button:hover {
   text-shadow: 0 0 5px #000, 0 0 20px #000;
   transform: translateZ(0px);
 }
+/* glow*/
+.glow {
+  text-shadow: 0 0 5px #39ff14;
+}

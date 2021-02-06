@@ -15,6 +15,7 @@
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
     "react-icons": "^4.1.0",
+    "react-infinite-scroll-component": "^6.0.0",
     "react-redux": "^7.2.2",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
@@ -59,5 +60,5 @@
     "eslint-plugin-react": "^7.22.0",
     "prettier": "^2.2.1"
   },
- "proxy": "http://localhost:8080/api"
+  "proxy": "http://localhost:8080/api"
 }
