@@ -1,36 +1,56 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-
 import * as AiIcons from "react-icons/ai";
 import InfiniteScroll from "react-infinite-scroll-component";
-
-import { fetchMovies } from "../actions/movieActions";
+import { Link } from "react-router-dom";
+import { fetchMovies, totalMovies } from "../actions/movieActions";
 
 const Test98 = (props) => {
-  const { fetchMovies, movies } = props;
+  const { fetchMovies, movies, total, totalMovies } = props;
   const [skip, setSkip] = useState(0);
+  const [hasMore, setHasMore] = useState(true);
 
   const loadMore = () => {
-    fetchMovies(skip);
-    setSkip(skip + 1);
+    if (movies.length >= total) {
+      setHasMore(false);
+    } else {
+      setTimeout(() => {
+        fetchMovies(skip);
+        setSkip(skip + 1);
+      }, 750);
+    }
   };
   useEffect(() => {
     fetchMovies(skip);
+    totalMovies();
     setSkip(skip + 1);
   }, []);
+  const loading = (
+    <div className="spinner-grow text-warning" role="status">
+      <span className="sr-only">.</span>
+    </div>
+  );
 
+  const endMessage = (
+    <div className="pt-3">
+      <span>Want To see </span>
+      <Link className="btn btn-danger" to="/videos" type="button">
+        Videos
+      </Link>{" "}
+      <Link className="btn btn-danger" to="/entertainment" type="button">
+        Entertainment
+      </Link>
+    </div>
+  );
   return (
     <InfiniteScroll
       dataLength={movies.length}
       next={loadMore}
-      hasMore={true}
-      loader={<h4>Loading...</h4>}
-      endMessage={
-        <p style={{ textAlign: "center" }}>
-          <b>Yay! You have seen it all</b>
-        </p>
-      }
+      hasMore={hasMore}
+      loader={loading}
+      scrollThreshold="100px"
+      endMessage={endMessage}
     >
       <div className="container  ">
         <div className="flex ">
@@ -100,11 +120,14 @@ const Test98 = (props) => {
 
 Test98.propTypes = {
   movies: PropTypes.array.isRequired,
+  total: PropTypes.number,
   fetchMovies: PropTypes.func,
+  totalMovies: PropTypes.func,
 };
 
 const mapStateToProps = ({ movies }) => ({
   movies: movies.data,
+  total: movies.total,
 });
 
-export default connect(mapStateToProps, { fetchMovies })(Test98);
+export default connect(mapStateToProps, { fetchMovies, totalMovies })(Test98);
