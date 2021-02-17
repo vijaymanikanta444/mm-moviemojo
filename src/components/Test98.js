@@ -18,12 +18,13 @@ const Test98 = (props) => {
       setTimeout(() => {
         fetchMovies(skip);
         setSkip(skip + 1);
-      }, 750);
+      }, 1000);
     }
   };
   useEffect(() => {
     fetchMovies(skip);
     totalMovies();
+
     setSkip(skip + 1);
   }, []);
   const loading = (
@@ -43,6 +44,7 @@ const Test98 = (props) => {
       </Link>
     </div>
   );
+
   return (
     <InfiniteScroll
       dataLength={movies.length}
@@ -120,6 +122,7 @@ const Test98 = (props) => {
 
 Test98.propTypes = {
   movies: PropTypes.array.isRequired,
+
   total: PropTypes.number,
   fetchMovies: PropTypes.func,
   totalMovies: PropTypes.func,
@@ -130,4 +133,7 @@ const mapStateToProps = ({ movies }) => ({
   total: movies.total,
 });
 
-export default connect(mapStateToProps, { fetchMovies, totalMovies })(Test98);
+export default connect(mapStateToProps, {
+  fetchMovies,
+  totalMovies,
+})(Test98);

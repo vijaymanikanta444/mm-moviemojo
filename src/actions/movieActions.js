@@ -11,6 +11,11 @@ const moviesTotal = (total) => ({
   payload: total,
 });
 
+const moviesSearch = (data) => ({
+  type: types.SEARCH_MOVIES,
+  payload: data,
+});
+
 export const fetchMovies = (skip) => async (dispatch) => {
   const movies = await axios.get(`/movies?skip=${skip}&limit=16`);
 
@@ -21,4 +26,10 @@ export const totalMovies = () => async (dispatch) => {
   const movies = await axios.get(`/movies`);
 
   dispatch(moviesTotal(movies.data.total));
+};
+
+export const searchMovies = (title) => async (dispatch) => {
+  const movies = await axios.get(`/movies/search/movie/${title}`);
+
+  dispatch(moviesSearch(movies.data));
 };
